@@ -8,9 +8,9 @@ A simple system monitoring dashboard built with Java to see important System-Inf
 - Maven
 
 # Installation,Start
-git clone [https://github.com/VinWo2/java-system-monitor.git](https://github.com/VinWo2/java-system-monitor.git)
-cd java-system-monitor
-mvn compile exec:java -Dexec.mainClass="Monitor.Main"
+1. git clone [https://github.com/VinWo2/java-system-monitor.git](https://github.com/VinWo2/java-system-monitor.git)
+2. cd java-system-monitor
+3. mvn compile exec:java -Dexec.mainClass="Monitor.Main"
 
 # Tips
 - CPU Temp often not provided under Windows -> output 0
