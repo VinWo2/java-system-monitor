@@ -8,14 +8,14 @@ public class MemoryMonitor {
 
     public MemoryMonitor(){
         SystemInfo systemInfo = new SystemInfo();
-        memory = systemInfo.getHardware().getMemory();
+        this.memory = systemInfo.getHardware().getMemory();
     }
 
     public double getAvailableMemory(){
-    return (double) memory.getAvailable() /(1024*1024*1024); // GB
+    return (double) memory.getAvailable() /(1024.0*1024.0*1024.0); // GB
     }
     public double getUsedMemory(){
-        return (double) memory.getTotal() /(1024*1024*1024) - (double) memory.getAvailable() /(1024*1024*1024);
+        return (double) memory.getTotal() /(1024.0*1024.0*1024.0) - (double) memory.getAvailable() /(1024.0*1024.0*1024.0);
     }
 
     public double getTotalMemory(){
