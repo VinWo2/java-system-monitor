@@ -20,8 +20,7 @@ public class CpuMonitor {
         return sensors.getCpuTemperature();
     }
     public double getCpuUsage(){
-        return cpu.getSystemCpuLoad(1000)*100;
-
+        return cpu.getSystemCpuLoad(1000) * 100;
     }
 
 }
