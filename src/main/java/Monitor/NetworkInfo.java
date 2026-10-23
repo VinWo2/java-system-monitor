@@ -4,8 +4,6 @@ import oshi.SystemInfo;
 import oshi.hardware.NetworkIF;
 
 import java.util.List;
-
-
 public class NetworkInfo {
     private final List<NetworkIF> networkIFS;
 
