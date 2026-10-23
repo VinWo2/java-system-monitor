@@ -4,7 +4,7 @@ import oshi.SystemInfo;
 import oshi.hardware.CentralProcessor;
 import oshi.hardware.Sensors;
 
-public class CpuMonitor extends SystemMonitor{
+public class CpuMonitor {
     private final CentralProcessor cpu;
     private final Sensors sensors;
     public CpuMonitor(){
