@@ -5,18 +5,19 @@ import oshi.hardware.CentralProcessor;
 import oshi.hardware.Sensors;
 
 public class CpuMonitor extends SystemMonitor{
-    public final CentralProcessor cpu;
+    private final CentralProcessor cpu;
+    private final Sensors sensors;
     public CpuMonitor(){
         SystemInfo systemInfo = new SystemInfo();
         this.cpu = systemInfo.getHardware().getProcessor();
+        this.sensors = systemInfo.getHardware().getSensors();
 
     }
     public String getCpuName(){
         return cpu.getProcessorIdentifier().getName();
     }
     public double getCpuTemp(){
-        SystemInfo systemInfo = new SystemInfo();
-        return systemInfo.getHardware().getSensors().getCpuTemperature();
+        return sensors.getCpuTemperature();
     }
     public double getCpuUsage(){
         return cpu.getSystemCpuLoad(1000)*100;
